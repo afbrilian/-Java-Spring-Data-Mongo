@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/data/mongo
+    http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
+
+	<mongo:mongo id="mongo" host="127.0.0.1" port="27017" />
+	
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg ref="mongo" />
+		<constructor-arg value="test" />
+	</bean>
+	
+	<mongo:repositories base-package="com.mongotest2.repositories" >
+		<!--<mongo:repository id="personRepository" mongo-template-ref="mongoTemplate"/>-->
+	</mongo:repositories>
+	
+	<!--<bean id="registrationBean" class="com.mongotest2.beans.RegistrationBean">
+		<property name="repository" ref="personRepository" />
+	</bean>-->
+	
+	<!-- 
+		If you r not using @autowired annotation uncomment code above (old?), it will inject the repository manually
+		If you r using @autowired, leave it (new?), it will inject the repository using spring automatically
+	 -->
+	
+	<context:component-scan base-package="com.mongotest2.beans">
+	</context:component-scan>
+	
+</beans>
