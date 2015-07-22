@@ -16,11 +16,16 @@ public class TestUnit {
 	public static void main(String [] args) throws Exception {
 		Person a = new Person("Joni", "Jakarta", 22);
 		
+//		Use the mongoTemplate
 //		MongoTemplate mongoOps = (MongoTemplate)context.getBean("mongoTemplate");
 //		mongoOps.insert(a);
 		
+//		use the Repository
 		RegistrationBean registrationBean = (RegistrationBean)context.getBean("registrationBean");
 		registrationBean.getRepository().save(a);
+		for (Person p : registrationBean.getRepository().findAll()) {
+			System.out.println(p.toString());
+		}
 	}
 	
 }
