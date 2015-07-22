@@ -20,7 +20,7 @@ public class TestUnit {
 //		MongoTemplate mongoOps = (MongoTemplate)context.getBean("mongoTemplate");
 //		mongoOps.insert(a);
 		
-//		use the Repository
+//		Use the Repository
 		RegistrationBean registrationBean = (RegistrationBean)context.getBean("registrationBean");
 		registrationBean.getRepository().save(a);
 		for (Person p : registrationBean.getRepository().findAll()) {
