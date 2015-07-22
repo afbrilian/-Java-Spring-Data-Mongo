@@ -40,12 +40,13 @@ How it looks on the manual method:
 * define the repository and its id
 * connect to the property name in service (registrationBean.java)
 
-and for the automatic method:
+And for the automatic method:
 ```
   <context:component-scan base-package="com.mongotest2.beans">
 	</context:component-scan>
 ```
 * Only need to define the component-scan and the @autowired do the rest.
 
-at runtime (TestUnit.java) this application will read the XML config (SpringContext.xml), getBean method will call the bean and its done.
-any question or improvement in this explanation is welcomed :)
+At runtime (TestUnit.java) this application will read the XML config (SpringContext.xml), getBean method will call the bean and its done.
+
+Any question or improvement for this explanation is welcomed :)
