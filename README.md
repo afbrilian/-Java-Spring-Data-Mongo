@@ -28,12 +28,12 @@ The Repository concept will work by using the MongoRepository interface (DAO) an
 
 How it looks on the manual method:
 ```
-  <mongo:repositories base-package="com.mongotest2.repositories" >
+	<mongo:repositories base-package="com.mongotest2.repositories" >
 		<mongo:repository id="personRepository" mongo-template-ref="mongoTemplate"/>
 	</mongo:repositories>
 	
 	<bean id="registrationBean" class="com.mongotest2.beans.RegistrationBean">
-	  <property name="repository" ref="personRepository" />
+		<property name="repository" ref="personRepository" />
 	</bean>
 ```
 * first you should define the bean
@@ -42,7 +42,10 @@ How it looks on the manual method:
 
 And for the automatic method:
 ```
-  <context:component-scan base-package="com.mongotest2.beans">
+	<mongo:repositories base-package="com.mongotest2.repositories" >
+	</mongo:repositories>
+	
+	<context:component-scan base-package="com.mongotest2.beans">
 	</context:component-scan>
 ```
 * Only need to define the component-scan and the @autowired do the rest.
