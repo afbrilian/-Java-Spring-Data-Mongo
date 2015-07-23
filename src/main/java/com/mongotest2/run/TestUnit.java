@@ -8,7 +8,6 @@ import com.mongotest2.model.Person;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Query;
 
 public class TestUnit {
 	public static RegistrationBean registrationBean;
