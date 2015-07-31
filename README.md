@@ -50,4 +50,6 @@ And for the automatic method:
 
 At runtime (TestUnit.java) this application will read the XML config (SpringContext.xml), getBean method will call the bean and its done.
 
+> do not f*****g ever forget to add constructor even though its empty to the model!!
+
 Any question or improvement for this explanation is welcomed :)
