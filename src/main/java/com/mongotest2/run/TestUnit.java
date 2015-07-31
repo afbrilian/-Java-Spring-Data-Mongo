@@ -31,7 +31,7 @@ public class TestUnit {
 		mongoOps.dropCollection(Person.class); //use reflect
 		
 		//insert new documents
-		List<Person> persons = new ArrayList<>();
+		List<Person> persons = new ArrayList();
 		persons.add(new Person("Joni", "Jakarta", 22));
 		persons.add(new Person("Jona", "Depok", 23));
 		mongoOps.insert(persons, Person.class);
@@ -44,7 +44,7 @@ public class TestUnit {
 		registrationBean.getRepository().deleteAll();
 		
 		//insert new documents
-		List<Person> persons = new ArrayList<>();
+		List<Person> persons = new ArrayList();
 		persons.add(new Person("Joni", "Jakarta", 22));
 		persons.add(new Person("Jona", "Depok", 23));
 		registrationBean.getRepository().save(persons);
