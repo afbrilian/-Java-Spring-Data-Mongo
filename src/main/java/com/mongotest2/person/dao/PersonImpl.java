@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.mongotest2.person.model.Person;
 import com.mongotest2.person.repositories.PersonRepository;
+import com.mongotest2.seq.dao.SequenceDao;
 
 @Service
 public class PersonImpl implements PersonDao {
@@ -14,8 +15,12 @@ public class PersonImpl implements PersonDao {
 	@Autowired
 	private PersonRepository repository; 
 	
+	@Autowired
+	private SequenceDao sequence;
+	
 	public void save(String name, String homeTown, int age) {
 		Person person = new Person(name, homeTown, age);
+		person.setPersonId(sequence.getNextSequenceId("person"));
 		repository.save(person);
 	}
 	

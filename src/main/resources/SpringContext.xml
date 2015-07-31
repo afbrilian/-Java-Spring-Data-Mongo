@@ -28,7 +28,7 @@
 		If you r using @autowired, leave it (new?), it will inject the repository using spring automatically
 	 -->
 	
-	<context:component-scan base-package="com.mongotest2.person.beans, com.mongotest2.person.dao">
+	<context:component-scan base-package="com.mongotest2.person.beans, com.mongotest2.person.dao, com.mongotest2.seq.dao">
 	</context:component-scan>
 	
 </beans>
