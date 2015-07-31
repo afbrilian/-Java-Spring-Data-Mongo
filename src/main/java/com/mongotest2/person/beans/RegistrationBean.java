@@ -1,6 +1,7 @@
-package com.mongotest2.beans;
+package com.mongotest2.person.beans;
 
-import com.mongotest2.repositories.PersonRepository;
+import com.mongotest2.person.repositories.PersonRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

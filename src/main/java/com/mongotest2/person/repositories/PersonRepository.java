@@ -1,7 +1,8 @@
-package com.mongotest2.repositories;
+package com.mongotest2.person.repositories;
 
 import java.util.List;
-import com.mongotest2.model.Person;
+
+import com.mongotest2.person.model.Person;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

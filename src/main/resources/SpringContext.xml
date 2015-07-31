@@ -15,7 +15,7 @@
 		<constructor-arg value="test" />
 	</bean>
 	
-	<mongo:repositories base-package="com.mongotest2.repositories" >
+	<mongo:repositories base-package="com.mongotest2.person.repositories" >
 		<!--<mongo:repository id="personRepository" mongo-template-ref="mongoTemplate"/>-->
 	</mongo:repositories>
 	
@@ -28,7 +28,7 @@
 		If you r using @autowired, leave it (new?), it will inject the repository using spring automatically
 	 -->
 	
-	<context:component-scan base-package="com.mongotest2.beans">
+	<context:component-scan base-package="com.mongotest2.person.beans, com.mongotest2.person.dao">
 	</context:component-scan>
 	
 </beans>

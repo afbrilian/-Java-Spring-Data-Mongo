@@ -1,4 +1,4 @@
-package com.mongotest2.model;
+package com.mongotest2.person.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -11,7 +11,7 @@ public class Person {
 	private String homeTown;
 	private int age;
 
-	public Person(String name, String homeTown ,int age) {
+	public Person(String name, String homeTown, int age) {
 		this.name = name;
 		this.homeTown = homeTown;
 		this.age = age;
