@@ -52,4 +52,4 @@ At runtime (TestUnit.java) this application will read the XML config (SpringCont
 
 > do not f*****g ever forget to add constructor even though its empty to the model!!
 
-Any question or improvement for this explanation is welcomed :)
+Any question or improvement for this explanation is welcome :)
